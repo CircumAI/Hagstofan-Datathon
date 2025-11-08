@@ -1,0 +1,169 @@
+/* Custom Styles for Iceland Export Dashboard */
+
+:root {
+    --primary-color: #0d6efd;
+    --success-color: #198754;
+    --info-color: #0dcaf0;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --dark-color: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Metric Cards */
+.metric-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15) !important;
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.metric-icon {
+    font-size: 3rem;
+    opacity: 0.2;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-header {
+    border-bottom: 2px solid rgba(0,0,0,0.05);
+    padding: 1rem 1.5rem;
+}
+
+/* Charts */
+canvas {
+    max-height: 400px;
+}
+
+/* Model Info Lists */
+#model-architecture ul,
+#model-config ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#model-architecture li,
+#model-config li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+#model-architecture li:last-child,
+#model-config li:last-child {
+    border-bottom: none;
+}
+
+/* Progress Indicators */
+.improvement-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.improvement-positive {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.improvement-negative {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0,0,0,.1);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
+    }
+    
+    .hero-section {
+        padding: 3rem 0 !important;
+    }
+}
+
+/* Feature List Styling */
+.feature-list {
+    columns: 2;
+    column-gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .feature-list {
+        columns: 1;
+    }
+}
+
+/* Tooltip Enhancement */
+.tooltip-inner {
+    max-width: 300px;
+    text-align: left;
+}
+
+/* Image Styling */
+img.img-fluid {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+img.img-fluid:hover {
+    transform: scale(1.02);
+}
