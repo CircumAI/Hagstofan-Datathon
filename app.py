@@ -370,7 +370,7 @@ def main():
     # We need at least 5 samples for the model to train properly with subsample=0.85
     # So lookback = len(train_data) - min_samples
     min_samples = 5
-    lookback = max(6, len(train_data) - min_samples)  # At least 6 months, maximum all available
+    lookback = min(max(6, len(train_data) - min_samples), len(train_data) - 1)  # Ensure lookback is valid
     
     # Generate predictions
     with st.spinner('Training models and generating predictions...'):
